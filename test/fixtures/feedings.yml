@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  email: MyString
+  babyname: MyString
+  starttime: 2010-11-04 21:29:06
+  endtime: 2010-11-04 21:29:06
+  breast: MyString
+
+two:
+  email: MyString
+  babyname: MyString
+  starttime: 2010-11-04 21:29:06
+  endtime: 2010-11-04 21:29:06
+  breast: MyString

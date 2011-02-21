@@ -1,0 +1,59 @@
+<%
+ Time.zone="Eastern Time (US & Canada)"
+ first=1 
+ count=0 %>
+<div style="width:300px;border:3px black groove;text-align:center">
+<%= button_to 'New Feeding', new_feeding_path %>
+</div>
+<div style="width:300px;border:3px gray groove;">
+
+<ol>
+<% 
+@feedings.reverse.each do |feeding| %>
+<%
+time_since=Time.now-feeding.starttime
+time_since=time_since/(60*60)
+%>
+<% if first==1
+first=2 %>
+<h1><%=h feeding.babyname%>'s feedings</h1>
+<% end %>
+<% if time_since<48 %>
+<% count=count+1%>
+<DIV>
+<DIV>
+<%=h feeding.starttime.strftime("%a %b, %d %Y %I:%M %p")%>
+</DIV>
+<DIV>
+<%=h feeding.endtime.strftime("%a %b, %d %Y %I:%M %p")%>
+</DIV>
+<DIV>
+<%=h feeding.breast%>
+</DIV>
+</DIV>
+<TABLE border=0 cellpadding=0 cellspacing=0>
+<TR>
+<TD>
+<LI><%=h feeding.starttime.strftime("%a %b, %d %Y %I:%M %p")%>
+</TD>
+</TR>
+<TR>
+<TD>
+<%=h feeding.endtime.strftime("%a %b, %d %Y %I:%M %p")%>
+<br/>
+</TD>
+</TR>
+<TR>
+<TD>
+<%=h feeding.breast%>
+</TD>
+</TR>
+</TABLE>
+<%= link_to 'Edit', edit_feeding_path(feeding)%>
+<%= link_to 'Delete', feeding, :confirm => 'Are you sure?', :method => :delete %>
+</li>
+<% end %>
+<% end %>
+</ol>
+</div>
+

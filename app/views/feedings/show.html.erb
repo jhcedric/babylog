@@ -1,0 +1,25 @@
+<p>
+  <b>Babyname:</b>
+  <%=h @feeding.babyname %>
+</p>
+
+<p>
+  <b>Starttime:</b>
+  <%Time.zone="Eastern Time (US & Canada)"%>
+  <%=h @feeding.starttime %>
+ 
+</p>
+
+<p>
+  <b>Endtime:</b>
+  <%=h @feeding.endtime %>
+</p>
+
+<p>
+  <b>Breast:</b>
+  <%=h @feeding.breast %>
+</p>
+
+
+<%= link_to 'Edit', edit_feeding_path(@feeding) %> |
+<%= link_to 'Back', feedings_path %>

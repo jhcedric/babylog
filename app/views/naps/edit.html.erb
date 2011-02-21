@@ -1,0 +1,32 @@
+<h1>Editing nap</h1>
+
+<% form_for(@nap) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :babyname %><br />
+    <%= f.text_field :babyname %>
+  </p>
+  <p>
+    <%= f.label :starttime %><br />
+    <%= f.datetime_select :starttime %>
+  </p>
+  <p>
+    <%= f.label :endtime %><br />
+    <%= f.datetime_select :endtime %>
+  </p>
+  <p>
+    <%= f.label :detail %><br />
+    <%= f.text_field :detail %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @nap %> |
+<%= link_to 'Back', naps_path %>

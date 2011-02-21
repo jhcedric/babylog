@@ -1,0 +1,28 @@
+<p>
+  <b>Email:</b>
+  <%=h @diaper_change.email %>
+</p>
+
+<p>
+  <b>Babyname:</b>
+  <%=h @diaper_change.babyname %>
+</p>
+
+<p>
+  <b>Starttime:</b>
+  <%=h @diaper_change.starttime %>
+</p>
+
+<p>
+  <b>Endtime:</b>
+  <%=h @diaper_change.endtime %>
+</p>
+
+<p>
+  <b>Detail:</b>
+  <%=h @diaper_change.detail %>
+</p>
+
+
+<%= link_to 'Edit', edit_diaper_change_path(@diaper_change) %> |
+<%= link_to 'Back', diaper_changes_path %>

@@ -1,0 +1,2 @@
+module DiaperChangesHelper
+end

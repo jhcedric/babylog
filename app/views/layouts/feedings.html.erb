@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, 
+ maximum-scale=1.0">
+  <title>Feedings: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <script language="javascript">
+    var timeDiv=document.getElementById("time");
+    timeDiv.innerHTML=Date().now();
+  </script>
+  <style>
+option
+{
+font-size:10pt;
+}
+li,body,div
+{
+font-size:12pt;
+}
+table,th, td
+{
+padding:3px;
+font-size:12pt;
+
+}
+label,input
+{
+font-size:12pt;
+}
+p
+{
+font-size:12pt;
+}
+  </style>
+</head>
+<body>
+
+
+<p style="color: green"><%= notice %></p>
+
+<%= yield %>
+
+</body>
+</html>

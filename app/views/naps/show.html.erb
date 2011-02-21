@@ -1,0 +1,24 @@
+<p>
+  <b>Email:</b>
+  <%=h @nap.email %>
+</p>
+
+<p>
+  <b>Babyname:</b>
+  <%=h @nap.babyname %>
+</p>
+
+<p>
+  <b>Starttime:</b>
+  <%=h @nap.starttime %>
+</p>
+
+<p>
+  <b>Endtime:</b>
+  <%=h @nap.endtime %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_nap_path(@nap) %> |
+<%= link_to 'Back', naps_path %>

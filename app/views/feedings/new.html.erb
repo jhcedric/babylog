@@ -1,0 +1,28 @@
+<h1>New feeding</h1>
+
+<% form_for(@feeding) do |f| %>
+  <%= f.error_messages %>
+  <p style="font-size:1pt">
+    <%= f.label "Start" %><br/>
+    <%= f.datetime_select :starttime %>
+  </p>
+  <p style="font-size:1pt">
+    <%= f.label "End" %><br />
+    <%= f.datetime_select :endtime %>
+  </p>
+  <p>
+    <%= f.label "Type" %><br/>
+    <%= radio_button("feeding","breast","Left") %>Left
+    <%= radio_button("feeding","breast","Right") %>Right
+    <%= radio_button("feeding","breast","Bottle") %>Bottle<br>
+    <%= radio_button("feeding","breast","Pump-Left") %>Pump - Left
+    <%= radio_button("feeding","breast","Pump-Right") %>Pump - Right	
+  </p>
+ 
+  
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', feedings_path %>
